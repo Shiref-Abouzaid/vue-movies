@@ -1,18 +1,20 @@
 <template>
-  <header>
-    <router-link to="/">
-      <h1>
-        <span>Vue</span>
-        Movies
-      </h1>
-    </router-link>
-  </header>
+  <div class="main-container">
+    <header>
+      <router-link to="/">
+        <h1>
+          <span>Vue</span>
+          Movies
+        </h1>
+      </router-link>
+    </header>
 
-  <router-view/>
+    <router-view/>
 
-<footer>
-  <p>Sherif AbouZaid &copy;  <a href="https://github.com/Shiref-Abouzaid" target="_blank">Github</a></p>
-</footer>
+  <footer>
+    <p>Sherif AbouZaid &copy;  <a href="https://github.com/Shiref-Abouzaid" target="_blank">Github</a></p>
+  </footer>
+  </div>
 </template>
 
 <style lang="scss">
@@ -22,7 +24,6 @@ $mainColor:#42B883;
   padding:0;
   box-sizing: border-box;
   font-family: 'Fira Sans', sans-serif;
-
   &::selection {
     background:transparentize($mainColor, 0.5)
   }
@@ -30,6 +31,11 @@ $mainColor:#42B883;
 
 body {
   background-color:#35495E;
+
+}
+.main-container {
+  max-width: 50rem;
+  margin: auto;
 }
 
 a {

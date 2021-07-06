@@ -25,7 +25,7 @@
             <!-- <div class="type">{{movie.Type}}</div> -->
           </div>
           <div class="detail">
-            <p class="year">{{movie.Year}}</p>
+            <p class="year">{{movie.Year}} - {{movie.Type}}</p>
             <h3>{{movie.Title}}</h3>
           </div>
 
@@ -47,7 +47,7 @@ export default {
 
     const searchMovies = () =>{
       if(search.value != '') {
-        fetch(`http://www.omdbapi.com/?i=tt3896198&apikey=${env.apikey}&s=${search.value}`)
+        fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=${env.apikey}&s=${search.value}`)
         .then(response => response.json())
         .then(data => {
           movies.value = data.Search;
